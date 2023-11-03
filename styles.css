@@ -26,6 +26,8 @@ menu li {
 }
 h1 {
   text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 0.02em;
 }
 .subheadline {
   text-align: center;
