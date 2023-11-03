@@ -6,25 +6,29 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content="Daniel Schaffer's CV">
+        <link href="./styles.css" rel="stylesheet">
     </head>
 
     <body>
-        <header>
+        <header id="header">
             <h1>Lebenslauf</h1>
-            <p>Web Developer</p>
+            <h2 class="subheadline">Daniel Schaffer</h2>
+            <p class="subheadline">Web Developer</p>
+            <p class="subheadline"><img
+                    src="https://media.licdn.com/dms/image/D4E03AQG3WUFwG48TLg/profile-displayphoto-shrink_800_800/0/1669899977980?e=2147483647&v=beta&t=Hriln2YsiRK2Z_gpe4eR8lJl7HKUcYxHrFj-fVcbHLw"
+                    border="2" width="120px"></p>
             <nav>
-                <a href="#experiences">EXPERIENCES</a>
-                <a href="#skills">SKILLS</a>
-                <a href="#contact">CONTACT</a>
-
+                <menu>
+                    <li><a href="#experiences">| EXPERIENCES |</a></li>
+                    <li><a href="#skills">| SKILLS |</a></li>
+                    <li><a href="#contact">| CONTACT |</a></li>
+                </menu>
             </nav>
         </header>
 
         <main>
 
-            <h2>Daniel Schaffer</h2>
-            <p><img src="https://media.licdn.com/dms/image/D4E03AQG3WUFwG48TLg/profile-displayphoto-shrink_800_800/0/1669899977980?e=2147483647&v=beta&t=Hriln2YsiRK2Z_gpe4eR8lJl7HKUcYxHrFj-fVcbHLw"
-                    border="2" width="120px"></p>
+
             <aside>
                 <p>
                     Geburtsdatum: <b>14.10.1975</b><br>
@@ -32,16 +36,19 @@
                     Wohnadresse: <b>10179 Berlin</b><br>
                 </p>
             </aside>
-            <p>This is a short introduction to myself.</p>
+            <p>
+                Hallo. Ich bin Daniel. Ich komme aus Wien und lebe seit 2019 in Berlin.
+                Derzeit bin ich in einer Weiterbildung zum Web Developer.
+            </p>
             <hr>
             <article>
-                <h3 id="experiences">EXPERIENCES</h3>
+                <h3 id="experiences">EXPERIENCES <strong><a href="#header">^</a></strong></h3>
                 <ol type="1" reversed>
                     <li>
                         <header>
                             <h4>enverque GmbH</h4>
                             <p>December 2021 - May 2023</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <p><em>Marketing Manager, Webmaster, Datenschutzbeauftragter</em></p>
                             <p>Eos ducimus vitae vero labore
                                 nostrum, aut maxime veniam, adipisci vel reprehenderit sunt architecto amet
                                 perspiciatis
@@ -52,7 +59,7 @@
                         <header>
                             <h4>Babylon Berlin</h4>
                             <p>January 2020 - December 2021</p>
-                            <p>Lorem ipsum dolor sit amet <strong>consectetur </strong>adipisicing elit. </p>
+                            <p><em>Assistent der Theaterleitung, Filmdisponent, Chef der Gastronomie</em> </p>
                             <p></p>Vero autem, est fugit, harum
                             iure delectus perferendis consequatur quas <i>accusantium</i>, error officia odio laboriosam
                             similique possimus. Non vel nam sapiente atque.</p>
@@ -61,8 +68,8 @@
                     <li>
                         <header>
                             <h4>N26</h4>
-                            <p>September 2019 - January 2019</p>
-                            <p>Lorem ipsum dolor sit amet <strong>consectetur </strong>adipisicing elit. </p>
+                            <p>September 2019 - January 2020</p>
+                            <p><em>Customer Specialist</em></p>
                             <p></p>Vero autem, est fugit, harum
                             iure delectus perferendis consequatur quas <i>accusantium</i>, error officia odio laboriosam
                             similique possimus. Non vel nam sapiente atque.</p>
@@ -73,7 +80,7 @@
             </article>
             <hr>
             <article>
-                <h3 id="skills">SKILLS</h3>
+                <h3 id="skills">SKILLS <strong><a href="#header">^</a></strong></h3>
                 <section>
                     <h4>Soft skills</h4>
                     <ul>
@@ -95,7 +102,7 @@
             </article>
             <hr>
             <article>
-                <h3 id="contact">CONTACT</h3>
+                <h3 id="contact">CONTACT <strong><a href="#header">^</a></strong></h3>
                 <p>
                     Tel: <a href="tel:18001357924">1800 1357924</a><br>
                     E-Mail: <a href="mailto:ding@ding.dong">ding@dong.dong</a>

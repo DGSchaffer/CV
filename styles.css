@@ -1,0 +1,38 @@
+html {
+  font-family: monospace;
+}
+a {
+  text-decoration: none;
+}
+nav {
+  font-family: "Arial", sans-serif;
+  background-color: darkblue;
+  color: #fff;
+  padding: 5px;
+}
+nav a {
+  color: #fff;
+}
+nav a:hover {
+  color: deepskyblue;
+}
+menu {
+  list-style: none;
+  text-align: center;
+}
+menu li {
+  display: inline-block;
+  margin-right: 22px;
+}
+h1 {
+  text-align: center;
+}
+.subheadline {
+  text-align: center;
+}
+aside {
+  margin: auto;
+  width: 17%;
+  border: none;
+  padding: 10px;
+}
