@@ -1,9 +1,32 @@
+* {
+  box-sizing: border-box;
+}
+
 html {
   font-family: monospace;
+  font-size: 1.1em;
 }
+
+body {
+  margin: 0;
+}
+
 a {
   text-decoration: none;
 }
+/** header {
+  width: 100vw;
+}
+main {
+  width: 100vw;
+} **/
+
+/* p::first-letter {
+  font-size: x-large;
+  color: #fff;
+  background-color: darkblue;
+} */
+
 nav {
   font-family: "Arial", sans-serif;
   background-color: darkblue;
@@ -26,12 +49,17 @@ menu li {
 }
 h1 {
   text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Agbalumo", "Arial", sans-serif;
   letter-spacing: 0.02em;
 }
 .subheadline {
   text-align: center;
 }
+
+.subheadline::after {
+  content: " 🫥";
+}
+
 aside {
   margin: auto;
   width: 20%;
@@ -39,7 +67,9 @@ aside {
   padding: 10px;
 }
 main {
-  margin: auto 200px;
+  padding: 16px;
+  max-width: 800px;
+  margin: 0 auto;
 }
 #contact {
   text-align: left;
@@ -59,4 +89,27 @@ main {
 }
 .name {
   color: darkgrey;
+}
+
+::selection {
+  background-color: darkblue;
+  color: aliceblue;
+}
+h3 {
+  position: relative;
+  left: -100px;
+  font-size: xx-large;
+}
+.badge {
+  font-size: xx-large;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: 400;
+  color: crimson;
+  background-color: lightpink;
+  position: absolute;
+  top: 0;
+  margin: 0%;
+  right: 0;
+  padding: 5px;
 }
