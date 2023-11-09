@@ -93,6 +93,8 @@ menu {
 menu li {
   display: inline-block;
   margin-right: 1rem;
+  /* display: flex;
+  flex-direction: column; */
 }
 
 @media screen and (min-width: 600px) {
@@ -102,8 +104,16 @@ menu li {
 
   menu li {
     margin-right: 2rem;
+    /* flex-direction: row; */
+    /* display: inline-block; */
   }
 }
+
+/* @media screen and (min-width: 768px) {
+  menu li {
+    flex-direction: row;
+  }
+} */
 
 .subheadline {
   text-align: center;
@@ -137,24 +147,28 @@ menu li {
   }
 }
 
-/* #whoami {
-  margin-left: 10px;
-} */
-
-/* #contact {
-  margin-left: 17px;
-} */
+#mainframe {
+  position: relative;
+}
 
 #experiences,
 #skills,
-#contact,
+#contact {
+  margin-left: 17px;
+  /* position: sticky; */
+  font-family: "Arial", sans-serif;
+  font-size: larger;
+}
+
+a[id="experiences"],
+h3 #skills,
+h3 #contact {
+  position: sticky;
+}
+
 #whoami {
   margin-left: 17px;
 }
-
-/* #skills {
-  margin-left: 17px;
-} */
 
 .contact {
   margin: auto;
@@ -213,4 +227,24 @@ h3 {
 
 ol {
   margin-left: 10px;
+}
+
+.job {
+  display: flex;
+  flex-direction: column;
+  padding-right: 5px;
+  font-size: 1.2rem;
+}
+
+.job i {
+  margin-left: 40px;
+  font-size: 1rem;
+  font-weight: 300;
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 768px) {
+  .job {
+    flex-direction: row;
+  }
 }
