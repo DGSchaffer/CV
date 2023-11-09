@@ -2,9 +2,10 @@
     <html>
 
     <head lang="en">
-        <title>CV</title>
+
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CV</title>
         <meta name="description" content="Daniel Schaffer's CV">
         <link rel="stylesheet" href="https://unpkg.com/normalize.css@8.0.1/normalize.css" />
         <link href="./styles.css" rel="stylesheet">
@@ -33,18 +34,20 @@
 
         <main>
 
-
-            <aside>
-                <p>
+            <article id="profile">
+                <p class="data">
                     Geburtsdatum: <b>14.10.1975</b><br>
                     Geburtsort: <b>Wien</b><br>
                     Wohnadresse: <b>10179 Berlin</b><br>
                 </p>
-            </aside>
-            <p>
-                Hallo. Ich bin Daniel. Ich komme aus Wien und lebe seit 2019 in Berlin.
-                Derzeit bin ich in einer Weiterbildung zum Web Developer.
-            </p>
+            </article>
+            <article id="whoami">
+                <p>
+                    Hallo. Ich bin Daniel. Ich komme aus Wien und lebe seit 2019 in Berlin.
+                    Derzeit bin ich in einer Weiterbildung zum Web Developer.
+                </p>
+            </article>
+
             <hr>
             <article>
                 <h3 id="experiences">EXPERIENCES <strong><a href="#header">^</a></strong></h3>
@@ -87,7 +90,7 @@
             <hr>
             <article>
                 <h3 id="skills">SKILLS <strong><a href="#header">^</a></strong></h3>
-                <section>
+                <section class="skills">
                     <h4>Soft skills</h4>
                     <ul>
                         <li>Skill 1</li>
@@ -96,8 +99,9 @@
                     </ul>
                 </section>
 
-                <h4>Technical skills</h4>
-                <section>
+
+                <section class="skills">
+                    <h4>Technical skills</h4>
                     <ul>
                         <li>Skill 4</li>
                         <li>Skill 5</li>
@@ -114,9 +118,11 @@
                     E-Mail: <a href="mailto:ding@ding.dong">ding@dong.dong</a>
                 </p>
             </article>
-            <p class="traktor"><img
+            <div class="traktor"><img
                     src="https://schlepperblog.de/files/schlepperblog/images/Traktoren/fordson-dexta/fordson.jpg"
-                    alt="Dexta" width="500px"></p>
+                    alt="Dexta" width="300px">
+                <div class="traktorname">Fordson Dexta</div>
+            </div>
             <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         </main>
 

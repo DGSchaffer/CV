@@ -1,14 +1,51 @@
-* {
+@viewport {
+  width: device-width;
+}
+
+@media screen and (min-width: 600px) {
+  html {
+    font-size: 1.2em;
+  }
+}
+
+*,
+*:before,
+*:after {
   box-sizing: border-box;
 }
 
 html {
   font-family: monospace;
   font-size: 1.1em;
+  /* max-width: 599px; */
 }
 
 body {
-  margin: 0;
+  margin: 0 auto;
+  /* max-width: 599px; */
+  /* display: block; */
+  /* margin: 0px auto; */
+}
+
+h1 {
+  text-align: center;
+  font-family: "Agbalumo", "Arial", sans-serif;
+  letter-spacing: 0.02em;
+}
+
+::selection {
+  background-color: darkblue;
+  color: aliceblue;
+}
+
+/* **************************************************** */
+
+main {
+  padding: 2px;
+  /* max-width: 600px; */
+  margin: 0 auto;
+  /* width: 100vw;   WARUM?????????????    */
+  max-width: 600px;
 }
 
 a {
@@ -17,9 +54,7 @@ a {
 /** header {
   width: 100vw;
 }
-main {
-  width: 100vw;
-} **/
+*/
 
 /* p::first-letter {
   font-size: x-large;
@@ -27,12 +62,24 @@ main {
   background-color: darkblue;
 } */
 
+#header {
+  font-size: 2rem;
+  position: relative;
+}
+#header p {
+  font-size: 55%;
+}
+#header h2 {
+  font-size: 75%;
+}
 nav {
   font-family: "Arial", sans-serif;
   background-color: darkblue;
   color: #fff;
-  padding: 5px;
+  padding: 1rem;
+  font-size: 0.52em;
 }
+
 nav a {
   color: #fff;
 }
@@ -45,61 +92,106 @@ menu {
 }
 menu li {
   display: inline-block;
-  margin-right: 22px;
+  margin-right: 1rem;
 }
-h1 {
-  text-align: center;
-  font-family: "Agbalumo", "Arial", sans-serif;
-  letter-spacing: 0.02em;
+
+@media screen and (min-width: 600px) {
+  nav {
+    font-size: 0.6em;
+  }
+
+  menu li {
+    margin-right: 2rem;
+  }
 }
+
 .subheadline {
   text-align: center;
 }
 
-.subheadline::after {
+/* .subheadline::after {
   content: " 🫥";
+} */
+
+#profile {
+  display: flex;
+  justify-content: center;
+}
+.data {
+  margin: auto;
+  /* width: 20%; UNDERSTAND??? */
+  border: none;
+  padding: 1rem;
+  position: relative;
+  /* text-align: center; */
+  /* left: 50px; */
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-aside {
-  margin: auto;
-  width: 20%;
-  border: none;
-  padding: 10px;
+@media screen and (min-width: 600px) {
+  .data {
+    background-color: ghostwhite;
+  }
 }
-main {
-  padding: 16px;
-  max-width: 800px;
-  margin: 0 auto;
+
+/* #whoami {
+  margin-left: 10px;
+} */
+
+/* #contact {
+  margin-left: 17px;
+} */
+
+#experiences,
+#skills,
+#contact,
+#whoami {
+  margin-left: 17px;
 }
-#contact {
-  text-align: left;
-}
+
+/* #skills {
+  margin-left: 17px;
+} */
+
 .contact {
   margin: auto;
-  width: 18%;
+  width: 22%;
   border: none;
   padding: 10px;
   margin-top: -40px;
 }
+
 .traktor {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
+  margin: 0 auto;
+  /* width: 50%; */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
 }
+
+.traktorname {
+  position: absolute;
+  top: 260px;
+  background-color: darkblue;
+  opacity: 0.55;
+  font-size: xx-large;
+  color: aliceblue;
+}
+
 .name {
   color: darkgrey;
 }
 
-::selection {
-  background-color: darkblue;
-  color: aliceblue;
-}
 h3 {
   position: relative;
-  left: -100px;
+  /* left: -100px; */
   font-size: xx-large;
 }
+
 .badge {
   font-size: xx-large;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
@@ -107,9 +199,17 @@ h3 {
   font-weight: 400;
   color: crimson;
   background-color: lightpink;
-  position: absolute;
+  position: fixed;
   top: 0;
   margin: 0%;
   right: 0;
   padding: 5px;
+}
+
+.skills {
+  margin-left: 17px;
+}
+
+ol {
+  margin-left: 10px;
 }
