@@ -14,17 +14,26 @@
   box-sizing: border-box;
 }
 
-html {
+:root {
   font-family: monospace;
   font-size: 1.1em;
-  /* max-width: 599px; */
+  --gradient1: #111190;
+  --gradient2: #71e2fa;
+  --navblue: darkblue;
+  --grad2trans: rgba(113, 226, 250, 0.2);
 }
 
 body {
   margin: 0 auto;
-  /* max-width: 599px; */
-  /* display: block; */
-  /* margin: 0px auto; */
+  --page-background-color: white;
+  --page-text-color: black;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  body {
+    --page-background-color: rgb(79, 76, 76);
+    --page-text-color: white;
+  }
 }
 
 h1 {
@@ -33,54 +42,49 @@ h1 {
   letter-spacing: 0.02em;
   color: #71e2fa;
   text-shadow: 3px 3px 4px #000;
+  padding-top: 0.7em;
 }
 
 ::selection {
-  background-color: darkblue;
-  color: aliceblue;
+  background-color: var(--navblue);
+  color: var(--gradient2);
 }
 
 /* **************************************************** */
 
 main {
   padding: 2px;
-  /* max-width: 600px; */
   margin: 0 auto;
-  /* width: 100vw;   WARUM?????????????    */
   max-width: 700px;
+  /* --gradient1: #111190;
+  --gradient2: #71e2fa;
+  --navblue: darkblue; */
 }
 
 a {
   text-decoration: none;
 }
-/** header {
-  width: 100vw;
-}
-*/
-
-/* p::first-letter {
-  font-size: x-large;
-  color: #fff;
-  background-color: darkblue;
-} */
 
 #header {
   font-size: 2rem;
   position: relative;
   background-color: aliceblue;
-  background-image: linear-gradient(225deg, #111190, #71e2fa);
+  background-image: linear-gradient(225deg, var(--gradient1), var(--gradient2));
 }
+
 #header p {
   font-size: 55%;
   color: fff;
 }
+
 #header h2 {
   font-size: 75%;
   color: fff;
 }
+
 nav {
   font-family: "Arial", sans-serif;
-  background-color: darkblue;
+  background-color: var(--navblue);
   color: #fff;
   padding: 1rem;
   font-size: 0.52em;
@@ -89,18 +93,19 @@ nav {
 nav a {
   color: #fff;
 }
+
 nav a:hover {
-  color: deepskyblue;
+  color: var(--gradient2);
 }
+
 menu {
   list-style: none;
   text-align: center;
 }
+
 menu li {
   display: inline-block;
   margin-right: 1rem;
-  /* display: flex;
-  flex-direction: column; */
 }
 
 @media screen and (min-width: 600px) {
@@ -110,37 +115,24 @@ menu li {
 
   menu li {
     margin-right: 2rem;
-    /* flex-direction: row; */
-    /* display: inline-block; */
   }
 }
-
-/* @media screen and (min-width: 768px) {
-  menu li {
-    flex-direction: row;
-  }
-} */
 
 .subheadline {
   text-align: center;
 }
 
-/* .subheadline::after {
-  content: " 🫥";
-} */
-
 #profile {
   display: flex;
   justify-content: center;
 }
+
 .data {
   margin: auto;
   /* width: 20%; UNDERSTAND??? */
   border: none;
   padding: 1rem;
   position: relative;
-  /* text-align: center; */
-  /* left: 50px; */
   background-color: aliceblue;
   display: flex;
   flex-direction: column;
@@ -149,7 +141,7 @@ menu li {
 
 @media screen and (min-width: 600px) {
   .data {
-    background-color: ghostwhite;
+    background-color: var(--grad2trans);
   }
 }
 
@@ -196,10 +188,10 @@ h3 #contact {
 .traktorname {
   position: absolute;
   top: 253px;
-  background-color: darkblue;
+  background-color: var(--gradient1);
   opacity: 0.55;
   font-size: xx-large;
-  color: aliceblue;
+  color: var(--gradient2);
   padding: 3px 10px;
 }
 
@@ -259,19 +251,17 @@ footer {
   background-image: linear-gradient(135deg, #111190, #71e2fa);
   width: 100%;
   height: 160px;
-  /* position: relative; */
 }
+
 footer p {
   text-align: center;
   color: fff;
-  /* position: absolute;
-  top: 50px;
-  left: 50%; */
   padding-top: 70px;
 }
+
 footer p a {
   text-decoration: none;
-  color: #111190;
+  color: var(--gradient1);
   background-color: fff;
   opacity: 70%;
   font-weight: 600;
