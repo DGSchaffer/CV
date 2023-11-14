@@ -15,8 +15,8 @@
 }
 
 :root {
-  font-family: monospace;
-  font-size: 1.1em;
+  font-family: "Rubik", "Arial", sans-serif;
+  font-size: 1em;
   --gradient1: #111190;
   --gradient2: #71e2fa;
   --navblue: darkblue;
@@ -38,9 +38,9 @@ body {
 
 h1 {
   text-align: center;
-  font-family: "Agbalumo", "Arial", sans-serif;
+  font-family: "Rubik Mono One", "Arial", sans-serif;
   letter-spacing: 0.02em;
-  color: #71e2fa;
+  color: var(--gradient2);
   text-shadow: 3px 3px 4px #000;
   padding-top: 0.7em;
 }
@@ -50,7 +50,17 @@ h1 {
   color: var(--gradient2);
 }
 
+nav {
+  font-family: "Rubik", "Arial", sans-serif;
+  background-color: var(--navblue);
+  color: #fff;
+  padding: 1rem;
+  font-size: 0.52em;
+}
+
 /* **************************************************** */
+
+/* HEADER NAV */
 
 main {
   padding: 2px;
@@ -68,8 +78,59 @@ a {
 #header {
   font-size: 2rem;
   position: relative;
-  background-color: aliceblue;
-  background-image: linear-gradient(225deg, var(--gradient1), var(--gradient2));
+  background-color: var(--gradient2);
+  /* background-image: linear-gradient(225deg, var(--gradient1), var(--gradient2)); */
+  background-image: linear-gradient(
+      30deg,
+      #445 12%,
+      transparent 12.5%,
+      transparent 87%,
+      #445 87.5%,
+      #445
+    ),
+    linear-gradient(
+      150deg,
+      #445 12%,
+      transparent 12.5%,
+      transparent 87%,
+      #445 87.5%,
+      #445
+    ),
+    linear-gradient(
+      30deg,
+      #445 12%,
+      transparent 12.5%,
+      transparent 87%,
+      #445 87.5%,
+      #445
+    ),
+    linear-gradient(
+      150deg,
+      #445 12%,
+      transparent 12.5%,
+      transparent 87%,
+      #445 87.5%,
+      #445
+    ),
+    linear-gradient(
+      60deg,
+      #99a 25%,
+      transparent 25.5%,
+      transparent 75%,
+      #99a 75%,
+      #99a
+    ),
+    linear-gradient(
+      60deg,
+      #99a 25%,
+      transparent 25.5%,
+      transparent 75%,
+      #99a 75%,
+      #99a
+    );
+  background-size: 80px 140px;
+  background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+  /* background-image: linear-gradient(225deg, var(--gradient1), var(--gradient2)); */
 }
 
 #header p {
@@ -83,15 +144,18 @@ a {
 }
 
 nav {
-  font-family: "Arial", sans-serif;
-  background-color: var(--navblue);
-  color: #fff;
-  padding: 1rem;
-  font-size: 0.52em;
+  background-image: linear-gradient(135deg, var(--gradient1), var(--gradient2));
 }
 
 nav a {
   color: #fff;
+  transition: background-color 0.25s ease-in-out;
+}
+
+nav a:focus {
+  background-color: #71e2fa;
+  outline-color: cornflowerblue;
+  outline-style: dotted;
 }
 
 nav a:hover {
@@ -122,40 +186,145 @@ menu li {
   text-align: center;
 }
 
+/* ADDRESS */
+
 #profile {
   display: flex;
   justify-content: center;
 }
 
 .data {
-  margin: auto;
+  /* margin: auto; */
   /* width: 20%; UNDERSTAND??? */
   border: none;
+  border-radius: 20px;
   padding: 1rem;
   position: relative;
-  background-color: aliceblue;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  background-color: var(--grad2trans);
+  font-size: medium;
+  /* color: #fff;
+  text-align: right; */
 }
 
 @media screen and (min-width: 600px) {
   .data {
-    background-color: var(--grad2trans);
+    background-color: var(--gradient2);
   }
 }
 
-#mainframe {
-  position: relative;
+/* MAIN MAIN MAIN MAIN MAIN MAIN MAIN */
+
+/* blue titles */
+
+.head1,
+.head2,
+.head3 {
+  height: 4em;
+  background-color: var(--gradient2);
+  /* position: relative; */
+  border-top-right-radius: 35px;
+  border-bottom-right-radius: 35px;
 }
+
+#exp:hover .head1 {
+  background-color: var(--gradient1);
+  transition: background-color 2s ease-in-out;
+}
+
+#sklls:hover .head2 {
+  background-color: var(--gradient1);
+  transition: background-color 2s ease-in-out;
+}
+
+#cntct:hover .head3 {
+  background-color: var(--gradient1);
+  transition: background-color 2s ease-in-out;
+}
+
+.container {
+  display: flex;
+}
+
+/* japanese mosaic */
+
+.blue {
+  background-color: var(--gradient2);
+  width: 11rem;
+  position: relative;
+  background-image: linear-gradient(
+      30deg,
+      #445 12%,
+      transparent 12.5%,
+      transparent 87%,
+      #445 87.5%,
+      #445
+    ),
+    linear-gradient(
+      150deg,
+      #445 12%,
+      transparent 12.5%,
+      transparent 87%,
+      #445 87.5%,
+      #445
+    ),
+    linear-gradient(
+      30deg,
+      #445 12%,
+      transparent 12.5%,
+      transparent 87%,
+      #445 87.5%,
+      #445
+    ),
+    linear-gradient(
+      150deg,
+      #445 12%,
+      transparent 12.5%,
+      transparent 87%,
+      #445 87.5%,
+      #445
+    ),
+    linear-gradient(
+      60deg,
+      #99a 25%,
+      transparent 25.5%,
+      transparent 75%,
+      #99a 75%,
+      #99a
+    ),
+    linear-gradient(
+      60deg,
+      #99a 25%,
+      transparent 25.5%,
+      transparent 75%,
+      #99a 75%,
+      #99a
+    );
+  background-size: 80px 140px;
+  background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+
+  /* z-index: -1; */
+}
+
+.blue:hover {
+  background-color: var(--gradient1);
+  transition: background-color 2s ease-in-out;
+}
+
+/* qualifications */
+
+/* 
+#exp, #sklls, #cntct {
+  background-color: ccc;
+} */
 
 #experiences,
 #skills,
 #contact {
   margin-left: 17px;
-  /* position: sticky; */
   font-family: "Arial", sans-serif;
   font-size: larger;
+  color: white;
+  padding-top: 1em;
 }
 
 a[id="experiences"],
@@ -170,14 +339,16 @@ h3 #contact {
 
 .contact {
   margin: auto;
-  width: 22%;
+  /* width: 22%; */
   border: none;
   padding: 10px;
-  margin-top: -40px;
+  /* margin-top: -40px; */
 }
 
+/* Picture */
+
 .traktor {
-  margin: 0 auto;
+  margin: 10 auto;
   /* width: 50%; */
   display: flex;
   flex-direction: row;
@@ -187,12 +358,20 @@ h3 #contact {
 
 .traktorname {
   position: absolute;
-  top: 253px;
+  top: 115px;
   background-color: var(--gradient1);
   opacity: 0.55;
-  font-size: xx-large;
+  font-size: x-large;
   color: var(--gradient2);
   padding: 3px 10px;
+  text-align: center;
+}
+
+.traktor img {
+  border-radius: 15px;
+}
+.traktorname i {
+  font-size: small;
 }
 
 .name {
@@ -203,20 +382,6 @@ h3 {
   position: relative;
   /* left: -100px; */
   font-size: xx-large;
-}
-
-.badge {
-  font-size: xx-large;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
-  font-weight: 400;
-  color: crimson;
-  background-color: lightpink;
-  position: fixed;
-  top: 0;
-  margin: 0%;
-  right: 0;
-  padding: 5px;
 }
 
 .skills {
@@ -247,6 +412,8 @@ ol {
   }
 }
 
+/* FOOTER */
+
 footer {
   background-image: linear-gradient(135deg, #111190, #71e2fa);
   width: 100%;
@@ -266,4 +433,33 @@ footer p a {
   opacity: 70%;
   font-weight: 600;
   padding: 2px;
+}
+
+footer p a:hover {
+  background-color: var(--gradient1);
+  transition: background-color 0.3s linear;
+  color: #fff;
+  transition: color 0.3s linear;
+}
+
+/* BADGE */
+
+.badge {
+  font-size: xx-large;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: 400;
+  color: white;
+  background-color: fuchsia;
+  position: fixed;
+  top: 50;
+  margin: 0%;
+  right: 50;
+  padding: 5px;
+  border-radius: 2px;
+}
+
+#header:hover .badge {
+  transform: scale(250%);
+  transition: transform 0.2s ease-in-out;
 }
