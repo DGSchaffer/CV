@@ -43,6 +43,19 @@ h1 {
   color: var(--gradient2);
   text-shadow: 3px 3px 4px #000;
   padding-top: 0.7em;
+  font-size: 2rem;
+}
+
+@media screen and (min-width: 500px) {
+  h1 {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (min-width: 777px) {
+  h1 {
+    font-size: 4rem;
+  }
 }
 
 ::selection {
@@ -65,10 +78,19 @@ nav {
 main {
   padding: 2px;
   margin: 0 auto;
-  max-width: 700px;
-  /* --gradient1: #111190;
-  --gradient2: #71e2fa;
-  --navblue: darkblue; */
+  max-width: 85%;
+}
+
+@media screen and (min-width: 600px) {
+  main {
+    max-width: 75%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    max-width: 55%;
+  }
 }
 
 a {
@@ -76,6 +98,7 @@ a {
 }
 
 #header {
+  margin: auto;
   font-size: 2rem;
   position: relative;
   background-color: var(--gradient2);
@@ -312,11 +335,6 @@ menu li {
 
 /* qualifications */
 
-/* 
-#exp, #sklls, #cntct {
-  background-color: ccc;
-} */
-
 #experiences,
 #skills,
 #contact {
@@ -338,12 +356,33 @@ h3 #contact {
 }
 
 .contact {
-  margin: auto;
-  /* width: 22%; */
+  margin-left: 2em;
   border: none;
   padding: 10px;
-  /* margin-top: -40px; */
 }
+
+.contact a {
+  padding-right: 2em;
+  /* margin-right: 2em; */
+}
+
+.contact a::after {
+  content: " |";
+}
+
+/* #cntct { */
+/* display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 100%;
+}
+
+#exp {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 10% 30% 30% 30%;
+}
+#sklls {
+} */
 
 .name {
   color: darkgrey;
@@ -351,12 +390,64 @@ h3 #contact {
 
 h3 {
   position: relative;
-  /* left: -100px; */
   font-size: xx-large;
 }
 
 .skills {
-  margin-left: 17px;
+  width: 100%;
+  height: 100%;
+  /* margin-left: 17px; */
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 1fr;
+  grid-template-areas:
+    "headline1 headline2"
+    "techskill1 softskill1"
+    "techskill2 softskill2"
+    "techskill3 softskill3";
+  list-style: none;
+  margin-bottom: 2em;
+}
+
+.headline-tech {
+  grid-area: headline1;
+  color: darkblue;
+  padding: 0 0 0.5em 0;
+}
+
+/* .headline-tech:hover { */
+/* background-color: #111190; */
+/* color: #fff;
+} */
+
+.headline-soft {
+  grid-area: headline2;
+  color: darkblue;
+}
+
+/* .headline-soft:hover {
+  /* background-color: #111190; */
+/* color: #fff;
+} */
+
+.techskill1 {
+  grid-area: techskill1;
+  padding-right: 2em;
+}
+.techskill2 {
+  grid-area: techskill2;
+}
+.techskill3 {
+  grid-area: techskill3;
+}
+.softkill1 {
+  grid-area: softskill1;
+}
+.softkill2 {
+  grid-area: softskill2;
+}
+.softkill3 {
+  grid-area: softskill3;
 }
 
 ol {
@@ -383,11 +474,14 @@ ol {
   }
 }
 
+.contact a {
+  color: black;
+}
+
 /* Picture */
 
 .traktor {
   margin: 10 auto;
-  /* width: 50%; */
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -417,6 +511,7 @@ ol {
 @media screen and (min-width: 600px) {
   .traktor img {
     max-width: 50%;
+    filter: drop-shadow(3px 3px 4px var(--gradient2));
   }
   .traktorname {
     top: 115px;
