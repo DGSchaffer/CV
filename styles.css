@@ -44,19 +44,19 @@ h1 {
   letter-spacing: 0.02em;
   color: var(--gradient1);
   text-shadow: 0.1em 0.1em 0.05em #fff;
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin-top: 0;
 }
 
 @media screen and (min-width: 500px) {
   h1 {
-    font-size: 3rem;
+    font-size: 2.2rem;
   }
 }
 
 @media screen and (min-width: 777px) {
   h1 {
-    font-size: 4rem;
+    font-size: 2.8rem;
   }
 }
 
@@ -102,7 +102,7 @@ a {
 #header {
   margin: auto;
   padding-top: 2em;
-  font-size: 2rem;
+  font-size: 1.6rem;
   position: relative;
   background-color: white;
   background: #519dad;
@@ -178,9 +178,12 @@ menu li {
   border-radius: 15px;
   padding: 1.2rem;
   position: relative;
-  background-color: #c8f1f9;
+  /* background-color: #c8f1f9; */
+  /* opacity: 50%; */
   font-size: medium;
   line-height: 1.4em;
+  border: 1px solid #519dad;
+  margin-top: 30px;
 }
 
 /* MAIN */
@@ -191,6 +194,7 @@ menu li {
   height: 2em;
   background-color: #fff;
   opacity: 50%;
+  /* border-top: 1px solid #519dad; */
   border-top: 1px solid #519dad;
 }
 
