@@ -43,7 +43,7 @@ h1 {
   font-family: "Rubik Mono One", "Arial", sans-serif;
   letter-spacing: 0.02em;
   color: var(--gradient1);
-  text-shadow: 0.1em 0.1em 0.05em #fff;
+  text-shadow: 0.05em 0.1em #fff;
   font-size: 1.5rem;
   margin-top: 0;
 }
@@ -117,7 +117,7 @@ a {
 #header h2 {
   font-size: 55%;
   color: #111190;
-  text-shadow: 0.1em 0.1em 0.05em #fff;
+  text-shadow: 0.08em 0.08em #fff;
   padding-bottom: 2em;
   font-weight: 100;
 }
@@ -178,8 +178,6 @@ menu li {
   border-radius: 15px;
   padding: 1.2rem;
   position: relative;
-  /* background-color: #c8f1f9; */
-  /* opacity: 50%; */
   font-size: medium;
   line-height: 1.4em;
   border: 1px solid #519dad;
@@ -194,7 +192,6 @@ menu li {
   height: 2em;
   background-color: #fff;
   opacity: 50%;
-  /* border-top: 1px solid #519dad; */
   border-top: 1px solid #519dad;
 }
 
